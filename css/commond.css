@@ -1048,13 +1048,13 @@ footer .link {
   justify-content: flex-start;
   align-items: center;
 
-  width: 528px;
-  height: 581px;
+  /* width: 528px;
+  height: 581px; */
 
   padding-top: 40px;
   padding-left: 40px;
   padding-bottom: 40px;
-  padding-left: 40px;
+  padding-right: 40px;
 
   top: 50%;
   left: 50%;
@@ -1085,6 +1085,8 @@ footer .link {
   fill: var(--logo-end-color);
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  cursor: pointer;
 }
 
 .btn-exit-modal:hover, .btn-exit-modal:focus{
@@ -1112,11 +1114,9 @@ footer .link {
 .modal-label {
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.17px;
+  line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--text-color);
-
-  margin-bottom: 4px;
 }
 
 .form-box{
@@ -1125,13 +1125,20 @@ footer .link {
   display: flex;
   flex-direction: column;
   gap: 4px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--text-color);
+
+  margin-bottom: 4px;
 }
 
 .form-icon{
   position: absolute;
   left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 27px;
 
   fill: var(--titel-text-color);
 
@@ -1141,7 +1148,6 @@ footer .link {
 
 .modal-input {
   padding: 10px 12px 10px 42px;
-  margin-bottom: 10px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -1176,10 +1182,13 @@ footer .link {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form > label {
+.form-box {
   margin-bottom: 10px;
 }
 
+.form-box.comment{
+  margin-bottom: 20px;
+}
 
 #comment {
   box-sizing: border-box;
@@ -1188,7 +1197,6 @@ footer .link {
 
   width: 448px;
   height: 120px;
-  margin-bottom: 20px;
   padding: 12px 16px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
