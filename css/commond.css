@@ -107,6 +107,7 @@ footer .end-logo {
 /* header */
 
 .box-header {
+
   display: flex;
   align-items: center;
 
@@ -119,6 +120,11 @@ header .logo {
 }
 
 header {
+  position: sticky;
+  top: -1px;
+  z-index: 10;
+  
+  
   background-color: var(--header-beckground-color);
   font-weight: 500;
   font-size: 14px;
@@ -736,10 +742,13 @@ footer .link {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
+  outline: none;
+
   color: #ffffff;
 
   margin-bottom: 20px;
 }
+
 
 .email-sub {
   display: flex;
@@ -757,6 +766,22 @@ footer .link {
   padding: 15px 16px;
   background-color: var(--hero-footer-beckground-color);
   color: var(--hero-footer-text-color);
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#email-subscribe:focus{
+  border: 1px solid var(--accent-color);
+  outline: none;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#email-subscribe:not(:placeholder-shown) {
+  border: 1px solid var(--accent-color);
+  outline: none;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-button {
@@ -996,6 +1021,8 @@ footer .link {
 .backdrop {
   position: fixed;
 
+  z-index: 100;
+
   top: 0;
   left: 0;
   width: 100%;
@@ -1106,6 +1133,10 @@ footer .link {
   top: 50%;
   transform: translateY(-50%);
 
+  fill: var(--titel-text-color);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .modal-input {
@@ -1114,19 +1145,35 @@ footer .link {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .modal-input:not(:placeholder-shown){
+.modal-input:not(:placeholder-shown),
+#comment:not(:placeholder-shown) {
   border: 1px solid var(--accent-color);
+  outline: none;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input:not(:placeholder-shown) + .form-icon{
+.modal-input:not(:placeholder-shown) + .form-icon {
   fill: var(--accent-color);
-} */
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .modal-input:focus + .form-icon{
   fill: var(--accent-color);
 
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus, #comment:focus {
+  border: 1px solid var(--accent-color);
+  outline: none;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form > label {
